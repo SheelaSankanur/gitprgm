@@ -1,0 +1,101 @@
+import tkinter as tk
+from tkinter import messagebox
+
+root=tk.Tk()
+root.geometry("500x500")
+root.title("Fill Form")
+
+label1=tk.Label(root,text="Name")
+label1.pack()
+entry1=tk.Entry(root)
+entry1.pack()
+
+label2=tk.Label(root,text="Email")
+label2.pack()
+entry2=tk.Entry(root)
+entry2.pack()
+
+label3=tk.Label(root,text="age")
+label3.pack()
+entry3=tk.Entry(root)
+entry3.pack()
+
+label=tk.Label(root,text="address")
+label.pack()
+entry4=tk.Entry(root)
+entry4.pack()
+
+label=tk.Label(root,text="Select your programming language")
+label.pack()
+
+check1=tk.Checkbutton(root,text="I liked python",variable=tk.IntVar())
+check1.pack()
+check2=tk.Checkbutton(root,text="I like java",variable=tk.IntVar())
+check2.pack()
+check3=tk.Checkbutton(root,text="I like c++",variable=tk.IntVar())
+check3.pack()
+
+v1=tk.IntVar()
+v2=tk.IntVar()
+v3=tk.IntVar()
+check1.config(variable=v1)
+check2.config(variable=v2)
+check3.config(variable=v3)
+
+v1=tk.StringVar(value="option1")
+label=tk.Label(root,text="Select your gender")
+label.pack()
+choice=tk.IntVar()
+radiob1=tk.Radiobutton(root,text="male",variable=v1,value="male")
+radiob1.pack()
+radiob2=tk.Radiobutton(root,text="female",variable=v1,value="female")
+radiob2.pack()
+radiob3=tk.Radiobutton(root,text="other",variable=v1,value="others")
+radiob3.pack()
+
+scale=tk.Scale(root,from_=0,to=10)
+scale.pack()
+
+
+def submit():
+    name=entry1.get()
+    email=entry2.get()
+    age=entry3.get() 
+    address=entry4.get()
+    print("Name:",name)
+    print("Email:",email)
+    print("Age:",age)
+    print("Address:",address)
+
+    languages=[]
+    if v1.get()==1:
+        languages.append("I liked python")
+    if v2.get()==1:
+        languages.append("I liked java")
+    if v3.get()==1:
+        languages.append("I liked c++")
+    #selected=choice.get()
+
+    if v1.get()==1:
+        print("male")
+    elif v1.get()==2:
+        print("female")
+    elif v1.get()==3:
+        print("other")          
+    print(v1.get())
+    print("skill level:",scale.get()) 
+
+    message = f"""
+Name: {name}
+Email: {email}
+Age: {age}
+Address: {address}
+Languages: {', '.join(languages)}
+Gender: {v1.get()}
+Skill Level: {scale.get()}
+"""
+    messagebox.showinfo("submitted  details",message)
+button=tk.Button(root,text="Submit",command=submit)
+button.pack()
+
+root.mainloop()
