@@ -1,0 +1,16 @@
+import tkinter as tk
+
+root=tk.Tk()
+root.geometry("500x500")
+def greet():
+    name=entry.get()
+    result_label.config(text=f"hello,{name}!")
+root.title("mouse clicked event")
+tk.Label(root,text="enter your name:").pack(pady=5)
+entry=tk.Entry(root)
+entry.pack(pady=5)
+
+tk.Button(root,text="greet",command=greet).pack(pady=5)
+result_label=tk.Label(root,text= "your greeting will appear here!")
+result_label.pack(pady=5)
+root.mainloop()
