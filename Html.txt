@@ -1,0 +1,93 @@
+<html>
+    <title> Expanding cards</title>
+    <style>
+        *{
+        box-sizing:border-box;
+        margin:0;
+        padding:0;
+    }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        height: 100vh;
+        background: #f5f5f5;
+        overflow:hidden;
+    }
+    .container{
+        display: flex;
+        width: 90vw;
+    }
+    .panel{
+        background-size: cover;
+        background-position: center;
+        background-repeat:no-repeat;
+        height: 80vh;
+        border-radius: 50px;
+        color:white;
+        flex:0.5;
+        margin:10px;
+        position:relative;
+        cursor: pointer;
+        transition: flex 0.5s ease-in;
+    }
+    .panel h3{
+        position:absolute;
+        bottom: 20px;
+        left:20px;
+        font-size:24px;
+        opacity:0;
+        transition: opacity 0.3s ease-in;
+        color: rgba(0, 0, 0, 0.818);
+    }
+    .panel.active{
+        flex: 5;
+    }
+    .panel.active h3 {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        width: 100vw;
+      }
+      .panel:nth-of-type(4),
+      .panel:nth-of-type(5) {
+        display: none;
+      }
+    }
+    </style>
+    <body>
+  <div class="container">
+    <div class="panel active" style="background-image: url('https://picsum.photos/id/1015/1000/600');">
+      <h3>Explore The World</h3>
+    </div>
+    <div class="panel" style="background-image: url('https://picsum.photos/id/1025/1000/600');">
+      <h3>Wild Forest</h3>
+    </div>
+    <div class="panel" style="background-image: url('https://picsum.photos/id/1035/1000/600');">
+      <h3>Sunny Beach</h3>
+    </div>
+    <div class="panel" style="background-image: url('https://picsum.photos/id/1045/1000/600');">
+      <h3>City Life</h3>
+    </div>
+    <div class="panel" style="background-image: url('https://picsum.photos/id/1055/1000/600');">
+      <h3>Mountains</h3>
+    </div>
+  </div>
+ <script>
+    const panels = document.querySelectorAll('.panel');
+    panels.forEach(panel => {
+      panel.addEventListener('click', () => {
+        removeActiveClasses();
+        panel.classList.add('active');
+      });
+    });;
+    function removeActiveClasses(){
+      panels.forEach(panel => {
+        panel.classList.remove('active');
+      });
+    }
+  </script> 
+</html>
