@@ -1,0 +1,27 @@
+#include<iostream>
+#include<cstdlib>
+#include<ctime>
+using namespace std;
+
+int main(){
+	srand(static_cast<unsigned int >(time(0)));
+	int secretnumber=(rand()%100)+1;
+	int guess=0;
+	int attempts=0;
+	cout<<"welcome to the number guessnig game!"<<endl;
+	cout<<"i have a number between 1 and 100.can you guess it?"<<endl;
+	while(guess!=secretnumber){
+		cout<<"enter your guess";
+		cin>>guess;
+		attempts++;
+		if(guess>secretnumber){
+			cout<<"too high!Try again";
+		}else if(guess<secretnumber){
+			cout<<"too low!Try again";
+			
+		}else{
+			cout<<"congragulations!you guessed the number"<< secretnumber <<"in"<<attempts<<"attempts"<<endl;
+		}
+	}
+	return 0;
+}
