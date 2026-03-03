@@ -1,0 +1,14 @@
+def second_largest(nums):
+    largest=nums[0]
+    second=nums[1]
+    for i in nums[2:]:
+        if i>largest:
+            second=largest
+            largest=i
+        elif i>second and i!=largest:
+            second=i
+    return second
+
+t=(1,2,3,4,5)
+res=second_largest(t)
+print(res)
