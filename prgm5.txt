@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #centre{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <h2>this is a tag</h2>
+    <input type="text" placeholder="Enter Name">
+     <h3>select a device</h3>
+     <select id="select device">
+        <option selected disabled>select</option>
+        <option value="Apple">apple</option>
+        <option value="Vivo">vivo</option>
+        <option value="Redmi">Redmi</option>
+    </select>
+    <div id="centre">
+    <h1>A</h1>
+    </div>
+ </body>
+   <script>
+        let h2 =document.querySelector("h2")
+        function colorchange(){
+              h2.style.color="red";
+        }
+        //h2.addEventListener("dbclick",colorchange)
+        h2.addEventListener("click",function(){
+            h2.style.color="red";
+        })
+        h2.removeEventListener("click",colorchange)
+       //h1.addEventListener("dblclick",function(){
+         h2.style.color="red";
+       })
+         
+        //some events carry event data,such that if we make any changes to the elements it is in the event data
+        let input=document.querySelector("input")
+        input.addEventListener("input",function(evtdata){
+            console.dir(evtdata.data)
+        })
+        
+        let select= document.querySelector("select")
+        let h3=document.querySelector("h3")
+        select.addEventListener("change",function(evtdata){
+            h3.textContent=evtdata.target.value
+            // h3.textContent=`$(evtdata.target.value) got selected'
+            console.dir(select.value)
+        })
+        let h1=document.querySelector("h1")  
+        window.addEventListener("keydown",function(evtdata){
+            h1.textContent=evtdata.key
+            console.dir(evtdata.key)
+        })
+
+    </script>
+</html> 
