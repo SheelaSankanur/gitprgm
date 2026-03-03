@@ -1,0 +1,23 @@
+def binarysearch (arr,sz,tar):
+    st=0
+    end=sz-1
+
+    while st<=end:
+        mid=st+(end-st)//2
+
+        if arr[mid]==tar:
+            return mid
+        elif arr[mid]<tar:
+            st=mid+1
+        else:
+            end=mid-1
+    return -1
+
+arr=[2,4,5,6,9,3,1]
+sz=len(arr)
+tar=6 
+res=binarysearch(arr,sz,tar)
+if res!=-1:
+    print("element found at index",res)
+else:
+    print("element not found")
