@@ -1,0 +1,9 @@
+nums=[1,2,3,4,5]
+size=len(nums)
+largest=nums[0]
+
+for i in range(size):
+    if nums[i]>largest:
+        largest=nums[i]
+
+print("Largest is:",largest)
