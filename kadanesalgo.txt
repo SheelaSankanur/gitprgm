@@ -1,0 +1,15 @@
+def maxsubarray(arr,n):
+    currsum=0
+    maxsum=arr[0]
+     
+     for i in range(n):
+        currsum+=arr[i]
+        maxsum=max(maxsum,currsum)
+
+        if currsum<0:
+            currsum=0
+    return maxsum
+
+arr=[1,2,6,-4,,6,-8,9]
+n=len(arr)
+print("max sub array is:",maxsubarray(arr,n))
