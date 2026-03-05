@@ -1,0 +1,189 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#333;
+}
+
+/* Navbar */
+nav{
+    background:#6a0dad;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+/* Hero Section */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(to right,#e6ccff,#ffffff);
+    text-align:center;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+.hero p{
+    margin:15px 0;
+}
+
+.hero button{
+    padding:10px 20px;
+    background:#6a0dad;
+    color:white;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+    margin-top: 100px;
+}
+
+.hero button:hover{
+    background:#4b0082;
+}
+
+/* Sections */
+section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.skills ul{
+    list-style:none;
+}
+
+.skills li{
+    margin:10px 0;
+}
+
+/* Projects */
+.project-card{
+    background:white;
+    padding:20px;
+    margin:20px auto;
+    width:350px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    border-radius:10px;
+}
+
+/* Contact */
+form{
+    max-width:400px;
+    margin:auto;
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+}
+
+button.submit-btn{
+    background:#6a0dad;
+    color:white;
+    border:none;
+    padding:15px;
+    cursor:pointer;
+    
+}
+
+footer{
+    background:#6a0dad;
+    color:white;
+    padding:15px;
+    text-align:center;
+}
+.hero-social{
+    margin-top:20px;
+}
+
+.hero-social a{
+    font-size:28px;
+    margin:0 15px;
+    color:#6a0dad;
+    transition:0.3s;
+}
+
+.hero-social a:hover{
+    color:#4b0082;
+    transform:scale(1.2);
+}
+
+body.dark .hero-social a{
+    color:white;
+}
+/* Modern Social Icons */
+.hero-social{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.icon{
+    width:55px;
+    height:55px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    font-size:22px;
+    color:white;
+    text-decoration:none;
+    transition:0.4s ease;
+    position:relative;
+}
+
+/* Brand Colors */
+.github{ background:#333; }
+.linkedin{ background:#0077b5; }
+.whatsapp{ background:#25D366; }
+.email{ background:#dd4b39; }
+
+/* Glow Effect */
+.icon:hover{
+    transform:translateY(-8px) scale(1.1);
+    box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+
+/* Animated Pulse */
+.icon::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    background:inherit;
+    opacity:0.6;
+    z-index:-1;
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{ transform:scale(1); opacity:0.6; }
+    70%{ transform:scale(1.6); opacity:0; }
+    100%{ transform:scale(1); opacity:0; }
+}
+/* Dark Mode Support */
+body.dark .icon{
+    box-shadow:0 0 15px rgba(255,255,255,0.2);
+}
