@@ -1,0 +1,19 @@
+def insertionsort(arr,n):
+    for i in range(n):
+        curr=arr[i]
+        prev=i-1
+
+        while(prev>=0 and arr[prev]>curr):
+            arr[prev+1]=arr[prev]
+            prev-=1
+        arr[prev+1]=curr
+
+def printarray(arr,n):
+    for i in range(n):
+        print(arr[i])
+n=7
+arr=[44,32,15,22,82,79,100]
+insertionsort(arr,n)
+printarray(arr,n)
+
+
