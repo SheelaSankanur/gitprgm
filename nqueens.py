@@ -1,5 +1,4 @@
 class Solution:
-
     def isSafe(self, board, row, col, n):
         # Check same column
         for i in range(row):
@@ -24,7 +23,6 @@ class Solution:
 
         return True
 
-
     def nQueens(self, board, row, n, ans):
         if row == n:
             ans.append(["".join(r) for r in board])
@@ -42,7 +40,6 @@ class Solution:
         ans = []
         self.nQueens(board, 0, n, ans)
         return ans
-
 
 # Main program
 obj = Solution()
