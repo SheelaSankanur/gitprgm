@@ -3,14 +3,14 @@ def isArmstrong (n):
     sumofCubes=0
     while n!=0 :
         digit=n%10
-        sumofCubes=(digit*digit*digit)
-        n=n/10
+        sumofCubes+=(digit*digit*digit)
+        n=n//10
     
-    return sumofCubes==copyN
+    return sumofCubes==copyN 
  
 
-n=111
+n=int(input("enter the number:"))
 if(isArmstrong(n)):
-    print("is an armstrong number")
+    print(n,"is an armstrong number")
 else:
     print(n,"is not an armstrong number")
