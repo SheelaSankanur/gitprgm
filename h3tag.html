@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>document</title>
+    </head>
+    <body>
+        <input type="text" placeholder="Enter Name">
+     <h3>select a device</h3>
+    </body>
+    <script>  
+        let h3=document.querySelector("h3")
+        h3.addEventListener("mouseover",function(){
+            h3.style.backgroundColor ="red"
+        })
+        let input=document.querySelector("input")
+        input.addEventListener("input",function(evtdata){
+            console.dir(evtdata.data)
+        })
+        
+    </script>
+</html>
