@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h3>select a device</h3>
+     <select id="select">
+        <h3>select a device</h3>
+        <option selected disabled>select</option>
+        <option value="Apple">apple</option>
+        <option value="Vivo">vivo</option>
+        <option value="Redmi">Redmi</option>
+    </select>
+</body>
+<script>
+        let h3=document.querySelector("h3")
+        select.addEventListener("change",function(evtdata){
+            //h3.textContent=evtdata.target.value
+            h3.textContent=`${evtdata.target.value} got selected`
+            console.dir(select.value)
+        })
+</script>
+</html>
