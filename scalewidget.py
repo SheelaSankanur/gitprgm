@@ -11,7 +11,7 @@ scale2.pack()
 
 def submit():
     print("Horizontal Scale Value:",scale1.get())
-    print("Vertical Scale Value:",scale2.get())#scale1.get() and scale2.get() are used to get the value which is selected in the scale widget
+    print("Vertical Scale Value:",scale2.get()) #scale1.get() and scale2.get() are used to get the value which is selected in the scale widget
 button=tk.Button(root,text="Submit",command=submit).pack()
 
 root.mainloop()
