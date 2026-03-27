@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table format</title>
+    <style>
+        table,td,th{
+            border: 1px solid black;    
+        }
+        form{
+            border: 1px solid black;
+            width: 70%;
+            height: 280px;
+            padding: 20px;
+            margin: 10px;
+            background-color: rgb(197, 255, 255);
+            border-radius: 5px;
+        }
+        input{
+            background-color:beige;
+        }
+        label{
+            padding: 10px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        select{
+            margin-left: 11px;
+            padding: 5px;
+        }
+        button{
+            padding: 5px;
+            width: 90px;
+            background-color: rgb(52, 249, 52);
+            border: none;
+            border-radius: 5px;
+            margin-left: 150px;
+        }
+        button:hover{
+            background-color: blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Course</th>
+            <th>CGPA</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>Sheela</td>
+            <td>Python</td>
+            <td>8.72</td>
+            <td>Guledgudd</td>
+        </tr>
+        <tr>
+            <td>Sakshi</td>
+            <td>Bcom</td>
+            <td>8.50</td>
+            <td>Bagalkot</td>
+        </tr>
+    </table>
+    <br>
+    <form>
+    <label>Name:</label>
+    <input type="text" name="Name" required><br><br>
+    <label>Email:</label>
+    <input type="email" name="email" required><br><br>
+    <label>Date:</label>
+    <input type="date" name="date" required><br><br>
+    <label>File:</label>
+    <input type="file" name="choose file" required><br><br>
+    <h3>Select sport</h3>
+    <select id="sport" name="sport">
+        <option value="Cricket">Cricket</option>
+        <option value="Hockey">Hockey</option>
+        <option value="Tennis">Tennis</option>
+    </select><br><br>
+
+    <button onclick="button()" name="Submit">Submit</button>
+    </form>
+    <script>
+         function button(){
+            alert("Successfully submited")
+         }
+        let select= document.querySelector("select")
+        let h3=document.querySelector("h3")
+        select.addEventListener("change",function(evtdata){
+            //h3.textContent=evtdata.target.value
+            h3.textContent=`${evtdata.target.value} got selected`
+            console.dir(select.value)
+        })
+    </script>
+</body>
+</html>
