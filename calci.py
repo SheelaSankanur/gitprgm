@@ -24,3 +24,6 @@ while True:
         if operation==5:
             print("Exiting the calculator. Goodbye!")
             break
+        else:            
+            print("Invalid choice. Please select a valid operation (1-5).")    
+            
