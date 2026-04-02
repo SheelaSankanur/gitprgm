@@ -15,7 +15,7 @@ def restart():
         os.system("shutdown /r /t 1")
 def logout():
     if messagebox.askokcancel("Logout", "Are you sure you want to logout?"):
-        os.system("shutdown /l")
+        os.system("shutdown /l") 
 def cancel():
     if messagebox.askokcancel("Cancel Shutdown", "Are you sure you want to cancel the shutdown?"):
         os.system("shutdown /a")
