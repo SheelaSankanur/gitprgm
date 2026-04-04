@@ -5,7 +5,7 @@ def palindrome(n):
     while n!=0:
         digit=n%10 
         rev=rev*10+digit
-        n=n//10
+        n=n//10 
     return original == rev
 n=int(input("enter number:"))
 if palindrome(n):

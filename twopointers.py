@@ -7,6 +7,6 @@ def two_sum(arr,target):
         elif s<target:
             l+=1
         else:
-            r-=1
+            r-=1 
     return None 
 print(two_sum([1,2,3,4,5],9)) 
