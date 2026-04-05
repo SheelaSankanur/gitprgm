@@ -9,6 +9,8 @@ elif size=="M" or size=="m":
 elif size=="L" or size=="l":
     bill+=250
     print("Large pizza price is 250rs.")
+
+#add pepperoni
 add_pepperoni=input("Do you want pepperoni? Y or N:")
 if add_pepperoni=="Y" or add_pepperoni=="y":
     if size=="S" or size=="s":
@@ -17,8 +19,14 @@ if add_pepperoni=="Y" or add_pepperoni=="y":
     else:
         bill+=30
         print("Pepperoni for medium or large pizza is 30rs.")
+
+#add extra cheese 
 extra_cheese=input("Do you want extra cheese? Y or N:")
 if extra_cheese=="Y" or extra_cheese=="y":
-    bill+=20
-    print("Extra cheese is 20rs.")
-print(f"Your final bill is {bill} rs.")
+    if size=="S" or size=="s":
+        bill+=20
+        print("Extra cheese for small pizza is 20rs.")
+    else:
+        bill+=30
+        print("Extra cheese for medium or large pizza is 30rs.")
+print(f"Your final bill is {bill} rs.") 
