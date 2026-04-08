@@ -1,0 +1,19 @@
+student_data=[
+{"name":"ram",
+"roll_no":20,
+"age":23,
+"course":"python"},
+{"name":"ram",
+"roll_no":20,
+"age":23,
+"course":"python"}
+]
+def add_new_student(name,roll_no,age,course_opted):
+    new_student={}
+    new_student["name"]=name
+    new_student["roll_no"]=roll_no
+    new_student["age"]=age
+    new_student["course"]=course_opted
+    student_data.append(new_student)
+add_new_student("shyam",22,18,"c++")
+print(student_data)
