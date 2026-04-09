@@ -6,8 +6,8 @@ def two_sum_pair(nums,target):
         curr_sum=nums[left]+nums[right]
 
         if curr_sum==target:
-            return [nums[left],nums[right]]
-            #return [left,right]
+            return [nums[left],nums[right]]   #numbers
+            #return [left,right]  #indices 
         elif curr_sum<target:
             left+=1
         else:
