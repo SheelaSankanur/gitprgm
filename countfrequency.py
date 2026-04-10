@@ -8,4 +8,3 @@ def count_freq(nums):
     return freq
 nums=[1,2,1,3,2,1]
 print(count_freq(nums))
-    
