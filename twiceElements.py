@@ -10,12 +10,6 @@ nums=[1,2,3,4,1]
 print(twice_elements(nums)) 
 
 
-def remove_duplicates(nums):
-    unique_set=set(nums)
-    return list(unique_set) 
-nums=[1,2,1,3,2,1]
-print("without duplicates:",remove_duplicates(nums))
-
 
 def remove_duplicates_keep_order(nums):
     seen = set()
