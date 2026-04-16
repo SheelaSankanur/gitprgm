@@ -15,3 +15,12 @@ def is_connected(graph,u,v):
         return False
     return v in graph[u]
 print(is_connected(graph,0,1))
+
+def add_edge(graph,u,v):
+    if u not in graph:
+        graph[u]=[]
+    if v not in graph:
+        graph[v]=[]
+    graph[u].append(v)
+graph={}
+add_edge(graph,0,1)
