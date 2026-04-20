@@ -3,18 +3,18 @@ def reverse_string(s):
 print(reverse_string("abcd"))
 
 
-# def reverstring(s):
-#     rev=""
-#     for ch in s:
-#         rev=ch+rev
-#     return rev
-# print(reverstring("sheela"))
+def reverstring(s):
+    rev=""
+    for ch in s:
+        rev=ch+rev
+    return rev
+print(reverstring("sheela"))
 
-# def palindrome(s):
-#     cleaned=s.lower()
-#     return cleaned==cleaned[::-1]
-# print(palindrome("racecar"))
-# print(palindrome("sheela"))
+def palindrome(s):
+    cleaned=s.lower()
+    return cleaned==cleaned[::-1]
+print(palindrome("racecar"))
+print(palindrome("sheela"))
 
 
 # def count_char(s,ch):
