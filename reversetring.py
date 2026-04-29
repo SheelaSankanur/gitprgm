@@ -9,7 +9,6 @@ def reverstring(s):
         rev=ch+rev
     return rev
 print(reverstring("sheela"))
-
 def palindrome(s):
     cleaned=s.lower()
     return cleaned==cleaned[::-1]
